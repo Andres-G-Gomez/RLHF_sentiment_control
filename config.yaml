@@ -1,0 +1,31 @@
+# config.yaml
+# RLHF Configuration
+
+# Model settings
+model_name: "distilgpt2"
+max_length: 50
+temperature: 0.7
+top_p: 0.9
+
+# Training settings
+batch_size: 16
+ppo_epochs: 4
+learning_rate: 0.0000141
+reward_model_lr: 0.00005
+
+# Paths
+data_dir: "./data"
+model_dir: "./models"
+results_dir: "./results"
+
+# Experiment settings
+use_wandb: false
+device: "auto" # Will auto-detect CUDA
+
+# Test prompts for evaluation (used by evaluate.py)
+test_prompts:
+  - "Tell me about your day"
+  - "What do you think about technology?"
+  - "How would you describe the weather?"
+  - "Please write about your favorite hobby"
+  - "What are your thoughts on learning?"
